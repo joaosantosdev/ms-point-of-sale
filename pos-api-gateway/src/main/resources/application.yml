@@ -1,0 +1,10 @@
+spring:  application:    name: pos-api-gateway
+
+server:
+  port: 8765
+  
+zuul:
+  routes:
+    administrator:
+      service-id: pos-administrator
+      path: /pos-administrator/**
