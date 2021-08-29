@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: pos-administrator
+    
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pos-administrator
+    password: '061118'
+    username: postgres
+    initialization-mode: always
+    platform: postgres
+  
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+   
+    
+server:
+  port: 8000
+  
+
