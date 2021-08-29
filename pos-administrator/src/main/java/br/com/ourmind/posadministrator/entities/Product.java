@@ -29,6 +29,6 @@ public class Product {
 
 	private Double price;
 
-	private Long freebie_points;
+	private Long freebiePoints;
 
 }
