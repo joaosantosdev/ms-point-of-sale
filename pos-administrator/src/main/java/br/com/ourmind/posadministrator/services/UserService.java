@@ -60,4 +60,8 @@ public class UserService {
 		this.repository.save(user);
 	}
 
+	public List<UserDTO> findByIdsAndRoleId(List<Long> ids, Long roleId) {
+		return this.repository.findByIdInAndRoleId(ids, roleId).stream().map(user -> UserDTO.toDTO(user))
+				.collect(Collectors.toList());
+	}
 }

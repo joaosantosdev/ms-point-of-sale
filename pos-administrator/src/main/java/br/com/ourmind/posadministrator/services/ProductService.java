@@ -43,4 +43,11 @@ public class ProductService {
 		this.repository.save(product);
 	}
 
+	public List<ProductDTO> getByIds(List<Long> ids) {
+
+		return this.repository.findAllById(ids).stream().map(product -> ProductDTO.toDTO(product))
+				.collect(Collectors.toList());
+
+	}
+
 }

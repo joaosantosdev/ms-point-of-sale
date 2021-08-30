@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.ourmind.posadministrator.dto.ProductDTO;
@@ -43,5 +44,8 @@ public class ProductController {
 		this.service.update(id, productDTO);
 		return ResponseEntity.noContent().build();
 	}
-
+	@GetMapping(value = "/search")
+	public ResponseEntity<List<ProductDTO>> getByIds(@RequestParam List<Long> ids) {
+		return ResponseEntity.ok(this.service.getByIds(ids));
+	}
 }

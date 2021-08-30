@@ -1,9 +1,9 @@
 spring:
   application:
-    name: pos-administrator
+    name: pos-product-movement
     
   datasource:
-    url: jdbc:postgresql://localhost:5432/pos-administrator
+    url: jdbc:postgresql://localhost:5432/pos-product-movement
     password: ${POSTGRES_PASSWORD}
     username: postgres
     initialization-mode: always
@@ -20,16 +20,15 @@ spring:
         jdbc:
           lob:
             non_contextual_creation: true
-   
+    
     
 server:
   port: ${PORT:0}
-
+  
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
   instance:
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}}
