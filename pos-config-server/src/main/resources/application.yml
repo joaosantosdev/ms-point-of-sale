@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: pos-config-server
+  cloud:    config:      server:        git:
+          default-label: main          uri: https://github.com/joaosantosdev/ms-point-of-sale-config
+          username: ${GITHUB_USERNAME}
+          password: ${GITHUB_PASSWORD}
+  
+server:
+  port: 8888
+  
+  
