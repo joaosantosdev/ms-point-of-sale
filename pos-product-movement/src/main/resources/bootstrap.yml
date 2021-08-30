@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: pos-product-movement
+  config:
+    uri: http://localhost:8888
+  profiles:
+    active: dev
+    
+server:
+  port: ${PORT:0}
+  
+
