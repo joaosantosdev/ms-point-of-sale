@@ -1,8 +1,7 @@
 spring:
   application:
     name: pos-administrator
-    config:
-      uri: http://localhost:8888
+  cloud:    config:      uri: http://localhost:8888
  
   profiles:    active: dev
  

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: pos-freebie-roulette
+  cloud:
+    config:
+      uri: http://localhost:8888
+ 
+  profiles:
+    active: dev
+ 
+   
+server:
+  port: ${PORT:0}
