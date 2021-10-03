@@ -1,3 +1,4 @@
-INSERT INTO adm_role VALUES (1, 'Salesman');
-INSERT INTO adm_role VALUES (2, 'Client');
-INSERT INTO adm_role VALUES (3, 'Administrator');
+INSERT INTO adm_role VALUES (1, 'SALESMAN');
+INSERT INTO adm_role VALUES (2, 'CLIENT');
+INSERT INTO adm_role VALUES (3, 'ADMINISTRATOR');
+INSERT INTO adm_user VALUES (3, 'joao@gmail.com','ADMINISTRATOR', '$2a$10$smgtcFSLltueAsc490rJm./2OEdKNmLac07USJ.YrYRcta1PDTaJW', 3);

@@ -43,7 +43,9 @@ public class UserService {
 	}
 
 	public User getByEmail(String email) {
-		return this.repository.findByEmail(email);
+		User user = this.repository.findByEmail(email);
+		System.out.println(user.getRole().getRoleName());
+		return user;
 	}
 
 	public void update(Long id, UserDTO userDTO) {

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.ourmind.posadministrator.dto.UserDTO;
+import br.com.ourmind.posadministrator.entities.User;
 import br.com.ourmind.posadministrator.enums.RoleEnum;
 import br.com.ourmind.posadministrator.services.UserService;
 
@@ -45,10 +46,15 @@ public class UserController {
 		this.service.update(id, userDTO);
 		return ResponseEntity.noContent().build();
 	}
-	
+
 	@GetMapping(value = "/search/clients")
 	public ResponseEntity<List<UserDTO>> findByIdsAndRoleId(@RequestParam List<Long> ids) {
 		return ResponseEntity.ok(this.service.findByIdsAndRoleId(ids, RoleEnum.CLIENT.getId()));
+	}
+
+	@GetMapping(value = "/search")
+	public ResponseEntity<User> getByEmail(@RequestParam String email) {
+		return ResponseEntity.ok(this.service.getByEmail(email));
 	}
 
 }

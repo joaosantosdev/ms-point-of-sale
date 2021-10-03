@@ -7,4 +7,4 @@ zuul:
   routes:
     administrator:
       service-id: pos-administrator
-      path: /pos-administrator/**    freebie-roulette:      service-id: pos-freebie-roulette      path: /pos-freebie-roulette/**    product-movement:      service-id: pos- product-movement      path: /pos-product-movement/**
+      path: /pos-administrator/**          freebie-roulette:      service-id: pos-freebie-roulette      path: /pos-freebie-roulette/**          product-movement:      service-id: pos- product-movement      path: /pos-product-movement/**          oauth:      sensitive-headers: Cookie,Set-Cookie      service-id: pos-oauth      path: /pos-oauth/**
